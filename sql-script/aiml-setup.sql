@@ -1,0 +1,24 @@
+CREATE DATABASE ML_PROJECT;
+CREATE SCHEMA CHURN_PREDICTION;
+CREATE WAREHOUSE ML_WH WITH WAREHOUSE_SIZE='XSMALL' AUTO_SUSPEND=60 AUTO_RESUME=TRUE;
+
+use database ML_PROJECT;
+
+CREATE OR REPLACE TABLE customers (
+   customer_id INT,
+   gender STRING,
+   age INT,
+   income FLOAT,
+   tenure_months INT,
+   monthly_spend FLOAT,
+   num_tickets_raised INT,
+   membership_tier STRING,
+   churn BOOLEAN
+);
+
+CREATE OR REPLACE STAGE my_stage;
+
+select * from customers
+
+ALTER TABLE ML_PROJECT.PUBLIC.CUSTOMERS 
+MODIFY COLUMN CHURN BOOLEAN;
