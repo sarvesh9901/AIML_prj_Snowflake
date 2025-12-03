@@ -11,7 +11,7 @@ The objective is to demonstrate how Snowflake can be used for:
 * Data ingestion
 * Data engineering
 * Machine learning model training
-* Storing predictions
+* Prediction storage
   — using **Snowpark Python** within Snowflake itself.
 
 This project was created as part of the evaluation for an **AI/ML Engineer** role with a focus on **Snowflake + ML Operations**.
@@ -69,24 +69,6 @@ A **Snowpark Python Worksheet** was used to perform:
 
 Predictions are saved into a Snowflake table:
 `CUSTOMER_CHURN_PREDICTIONS`
-
----
-
-# 🧱 Architecture Diagram
-
-```
-Mockaroo Dataset
-      ↓
-Snowflake Snowsight (Upload CSV)
-      ↓
-CUSTOMERS Table (Raw Data)
-      ↓
-Snowpark Python (Preprocessing + ML Training + Predictions)
-      ↓
-Random Forest Churn Model
-      ↓
-CUSTOMER_CHURN_PREDICTIONS Table (Final Output)
-```
 
 ---
 
@@ -238,5 +220,4 @@ It showcases strong cloud-native AI/ML engineering skills aligned to the role re
 
 **Sarvesh**
 AI/ML Engineer Candidate
-
 
